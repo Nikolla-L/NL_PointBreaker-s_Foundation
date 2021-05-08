@@ -418,7 +418,7 @@ header{
     height:400px;
     width:100%;
     transition: .8s;
-    background:url('../images/hands.png') center/cover no-repeat fixed;
+    background:url('../images/hands.PNG') center/cover no-repeat fixed;
 }
 .bg-1-text{
     background-color:var(--color2);
