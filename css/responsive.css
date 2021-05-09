@@ -16,6 +16,9 @@
     .card-box{
         width:90%;
     }
+    .lines p{
+        margin-left:10px
+    }
 }
 @media(max-width:768px){
     .sidebar-btn{
@@ -142,8 +145,11 @@
 }
 @media(max-width:556px){
     .header-icons{
-        font-size:14px;
+        font-size:16px;
         width:fit-content;
+    }
+    .header-icons a{
+        margin-left:10px;
     }
     .card-box{
         flex-direction: column;
@@ -153,5 +159,108 @@
     }
     .card{
         width:100%;
+    }
+    .btn-wrap{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+}
+@media(max-width:461px){
+    header{
+        height:70px;
+        background-color: #1C1E25;
+    }
+    .header-icons{
+        display:none;
+    }
+    .sidebar-btn{
+        width:100%;
+    }
+    .sidebar-btn span{
+        display:none;
+    }
+    .header-icons-sidebar{
+        display:flex!important;
+    }
+    .menu-link{
+        font-size:18px;
+    }
+    .menu-item{
+        height:50px;
+    }
+    .menu{
+        margin-top:110px;
+    }
+    .sidebar-click{
+        margin-right:30px;
+    }
+    .sec1-title{
+        border-left-width: 1.8px;
+        padding-top:0!important;
+        padding-bottom:0!important;
+    }
+    .belowScroll{
+        flex-direction: column;
+    }
+    .belowScroll button{
+        position:absolute;
+        height:50px;
+        margin-top:75px;
+    }
+    .lines{
+        width:95%;
+    }
+    .phone{
+        margin-top:40px;
+        margin-left:30px;
+    }
+    .mail-address{
+        margin-bottom:20px;
+    }
+    .bg-1-text{
+        font-size:14px;
+        line-height: 16px;
+        text-align: center;
+        height:80px;
+        padding-bottom:15px!important;
+        padding-top:15px!important;
+    }
+    .bg-1-1{
+        padding-left:15px!important;
+        padding-bottom:15px!important;
+        padding-top:15px!important;
+        height:250px
+    }
+    .bg-1-wrap{
+        margin-top:0!important;
+    }
+    .title-1-div1{
+        margin-top:10px!important;
+        margin-bottom:0!important;
+    }
+    .v-more{
+        height:50px;
+    }
+}
+@media(max-width:412px){
+    .sec1-title{
+        padding-left:5px!important;
+    }
+    .sec1-title h1{
+        font-size:24px;
+    }
+    .title-1-div1 h1{
+        font-size:22px;
+    }
+    .fa-heart,
+    .fa-bookmark,
+    .fa-share-alt{
+        font-size:18px;
+    }
+    .card-header-box{
+        width:30px;
+        height:30px;
     }
 }
