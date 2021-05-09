@@ -429,6 +429,9 @@ header{
     position: absolute;
     transition:.4s;
     cursor:context-menu;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .bg-1-text:hover{
     background-color:#cc9a55d0;
