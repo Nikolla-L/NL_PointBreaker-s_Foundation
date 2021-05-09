@@ -204,6 +204,9 @@ header{
 .get-covered{
     display:block;
 }
+.header-icons-sidebar{
+    display:none!important;
+}
 /* section1 */
 .sec1-title{
     position:absolute;
