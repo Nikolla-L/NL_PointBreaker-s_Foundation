@@ -68,6 +68,13 @@ $(document).ready(()=>{
     })
 });
 
+let mobScreen =window.matchMedia('(max-width:461px)');
+mobScreen.addListener(()=>{
+    if(mobScreen.matches){
+        document.querySelector('header').style.height="70px";
+        document.querySelector('header').style.backgroundColor="#1C1E25";
+    }
+});
 // fucking carousel slider
 
 
