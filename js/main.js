@@ -73,6 +73,8 @@ mobScreen.addListener(()=>{
     if(mobScreen.matches){
         document.querySelector('header').style.height="70px";
         document.querySelector('header').style.backgroundColor="#1C1E25";
+    }else{
+        document.querySelector('header').style.backgroundColor="rgba(175, 175, 175, 0.493)";
     }
 });
 // fucking carousel slider
