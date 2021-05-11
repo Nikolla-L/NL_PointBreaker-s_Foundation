@@ -68,6 +68,7 @@ $(document).ready(()=>{
     })
 });
 
+
 let mobScreen =window.matchMedia('(max-width:461px)');
 mobScreen.addListener(()=>{
     if(mobScreen.matches){
@@ -77,6 +78,65 @@ mobScreen.addListener(()=>{
         document.querySelector('header').style.backgroundColor="rgba(175, 175, 175, 0.493)";
     }
 });
+
+
+// sec3 boxes scroller
+
+let sec3Boxes = document.querySelectorAll('.sec3-box');
+let sec3BoxesWrapper = document.querySelector('.sec3-boxes-wrapper');
+let sec3BoxesNames = document.querySelector('.sec3-nav-ul').children; 
+
+function findActiveBox(){
+    for(let i=0; i<sec3Boxes.length; i++){
+        if(sec3Boxes[i].classList.contains('active-box')){
+            sec3Boxes[i].classList.remove('active-box');
+            sec3BoxesNames[i].classList.remove('active-nav-li');
+        }
+    }
+}
+
+sec3Boxes.forEach((x, index) => {
+    x.addEventListener('click', ()=>{
+        findActiveBox();
+        x.classList.add('active-box');
+        sec3BoxesNames[index].classList.add('active-nav-li');
+        sec3BoxesWrapper.style.transform="translateX(-" + 10*Number(index) + "%)";
+    })
+});
+
+for(let i=0; i<sec3BoxesNames.length; i++){
+    sec3BoxesNames[i].addEventListener('click', ()=>{
+        findActiveBox();
+        sec3Boxes[i].classList.add('active-box');
+        sec3BoxesNames[i].classList.add('active-nav-li');
+        sec3BoxesWrapper.style.transform="translateX(-" + 10*Number(i) + "%)";
+    })
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // fucking carousel slider
 
 
