@@ -85,12 +85,18 @@ mobScreen.addListener(()=>{
 let sec3Boxes = document.querySelectorAll('.sec3-box');
 let sec3BoxesWrapper = document.querySelector('.sec3-boxes-wrapper');
 let sec3BoxesNames = document.querySelector('.sec3-nav-ul').children; 
+let arrows = document.querySelector('.sec3-slide-arrows');
+let bef = arrows.firstElementChild;
+let aft = arrows.lastElementChild;
+let numbering2 = document.getElementById('sec3-counter');
+var n=0;
 
 function findActiveBox(){
     for(let i=0; i<sec3Boxes.length; i++){
         if(sec3Boxes[i].classList.contains('active-box')){
             sec3Boxes[i].classList.remove('active-box');
             sec3BoxesNames[i].classList.remove('active-nav-li');
+            n=i;
         }
     }
 }
@@ -100,7 +106,8 @@ sec3Boxes.forEach((x, index) => {
         findActiveBox();
         x.classList.add('active-box');
         sec3BoxesNames[index].classList.add('active-nav-li');
-        sec3BoxesWrapper.style.transform="translateX(-" + 10*Number(index) + "%)";
+        sec3BoxesWrapper.style.transform="translateX(-" + 10* index + "%)";
+        numbering2.innerHTML = '0 '+ Number(index+1) +" / 0 6";
     })
 });
 
@@ -109,11 +116,32 @@ for(let i=0; i<sec3BoxesNames.length; i++){
         findActiveBox();
         sec3Boxes[i].classList.add('active-box');
         sec3BoxesNames[i].classList.add('active-nav-li');
-        sec3BoxesWrapper.style.transform="translateX(-" + 10*Number(i) + "%)";
+        sec3BoxesWrapper.style.transform="translateX(-" + 10* i + "%)";
+        numbering2.innerHTML = '0 '+ Number(i+1) +" / 0 6";
     })
 };
 
+bef.addEventListener('click', ()=>{
+    findActiveBox();
+    let k = n-1;
+    if(k<0) k=5;
+    else if(k>5) k=0;
+    sec3Boxes[k].classList.add('active-box');
+    sec3BoxesNames[k].classList.add('active-nav-li');
+    sec3BoxesWrapper.style.transform="translateX(-" + 10* k + "%)";
+    numbering2.innerHTML = '0 '+ Number(k+1) +"/ 0 6";
+});
 
+aft.addEventListener('click', ()=>{
+    findActiveBox();
+    let k = n+1;
+    if(k<0) k=5;
+    else if(k>5) k=0;
+    sec3Boxes[k].classList.add('active-box');
+    sec3BoxesNames[k].classList.add('active-nav-li');
+    sec3BoxesWrapper.style.transform="translateX(-" + 10* k + "%)";
+    numbering2.innerHTML = '0 '+ Number(k+1) +" / 0 6";
+});
 
 
 
