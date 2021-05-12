@@ -286,9 +286,18 @@
 
 /*responsive for sec3 scroll boxes */
 
+
+@media(max-width:1221px){
+    .active-box .card .card-body p{
+        font-size:16px;
+        line-height:26px;
+    }
+    .active-box .progressColor{
+        font-size:21px;
+    }
+}
 @media(max-width:1092px){
     #sec3{
         display:none;
     }
-    
 }
