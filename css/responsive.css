@@ -300,4 +300,31 @@
     #sec3{
         display:none;
     }
+    #sec3-1{
+        display:block;
+    }
+}
+@media(max-width:665px){
+    .card-container .card-header p{
+        font-size:14px;
+    }
+    .card-container .card-body p{
+       font-size:14px;
+       line-height:16px;
+    }
+}
+@media(max-width:431px){
+    .card-container .card-header p{
+        font-size:12px;
+    }
+    .card-container .card-body p{
+       font-size:11px;
+       line-height:14px;
+    }
+    .card-container .progress-bar{
+        font-size:13px;
+    }
+    .card-container .card-header-box{
+        width:60px;
+    }
 }
